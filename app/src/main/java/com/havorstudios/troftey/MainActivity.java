@@ -26,17 +26,25 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public String getCountryName(double lat, double lng) {
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+        boolean isConnected = activeNetwork != null && activeNetwork.isConnectedOrConnecting();
+        if (!isConnected) {
+            return "No internet connection";
+        }
         Geocoder geocoder = new Geocoder(this, Locale.getDefault());
         List<Address> addresses = null;
         try {
             addresses = geocoder.getFromLocation(lat, lng, 1);
         } catch (IOException e) {
             e.printStackTrace();
+            return "Geocoder API error";
         }
         if (addresses != null && addresses.size() > 0) {
             return addresses.get(0).getCountryName();
         }
-        return "";
+        return "Location not found";
     }
+
 
 }
