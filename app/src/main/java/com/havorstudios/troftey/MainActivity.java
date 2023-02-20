@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        getSupportActionBar().hide();
+
         // Initialize UI components
         btnGetCountry = findViewById(R.id.btnGetCountry);
         txtCountry = findViewById(R.id.txtCountry);
