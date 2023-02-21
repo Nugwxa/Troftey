@@ -4,7 +4,27 @@
 
     <string-array name="UK_array">
         <item>The United Kingdom is home to the town with the longest name in the world, Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch, fortunately the town is known also as  Llanfairpwllgwyngyll or simply Llanfair PG.</item>
-        
+        <item>The UK is home to some of the world\'s most famous writers, including William Shakespeare, Jane Austen, Charles Dickens, and J.K. Rowling.</item>
         <item>The shortest war in history was between Zanzibar and Great Britain, and it lasted only 38 minutes.</item>
+        <item>The UK was the first country to build a subway system, the London Underground, which opened in 1863.</item>
+        <item>The UK is the only country in the world with two official national anthems: "God Save the Queen" and "Flower of Scotland."</item>
+        <item>The world\'s first postage stamp, the Penny Black, was issued in the UK in 1840.</item>
+        <item>The UK is the birthplace of many popular sports, including soccer, rugby, cricket, and tennis.</item>
     </string-array>
+
+    <string-array name="Nigeria_array">
+        <item>The Igbo people of southeastern Nigeria declared an independent state called Biafra in 1967, which led to a civil war that lasted until 1970.</item>
+        <item>Nigeria has produced many internationally renowned writers, including Chinua Achebe, Wole Soyinka, and Chimamanda Ngozi Adichie.</item>
+        <item>The Nok civilization, which flourished in present-day Nigeria from around 1000 BC to 300 AD, produced some of the earliest known sculptures in Sub-Saharan Africa.</item>
+        <item>The Sokoto Caliphate, a Muslim state in northern Nigeria, was one of the largest empires in Africa in the 19th century.</item>
+        <item>Nigeria is home to the oldest known boat in Africa, the Dufuna Canoe, which was discovered in Yobe State and dates back to around 8500 BC.</item>
+        <item>The ancient city of Ife, in southwestern Nigeria, is the site of a major archaeological discovery: a terracotta head believed to be from the 12th century. The head, which depicts a woman with elaborate hair and jewelry, is considered a masterpiece of African art.</item>
+        <item>The National Arts Theatre in Lagos, which was completed in 1976, is the largest arts and culture complex in Africa.</item>
+        <item>The Nnamdi Azikiwe International Airport in Abuja is named after Nnamdi Azikiwe, a prominent Nigerian nationalist who was the country\'s first president.</item>
+        <item>The Nigerian Stock Exchange, which was founded in 1960, is the third-largest stock exchange in Africa, after the Johannesburg Stock Exchange and the Egyptian Exchange.</item>
+        <item>The Nigerian flag, which was designed in 1959 by Michael Taiwo Akinkunmi, features two green stripes representing Nigeria\'s agriculture, and a white stripe representing peace.</item>
+        <item>The Nigerian Civil War, which lasted from 1967 to 1970, resulted in the deaths of over a million people and had a profound impact on Nigerian society and politics.</item>
+    </string-array>
+
+
 </resources>

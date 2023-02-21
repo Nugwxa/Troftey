@@ -19,6 +19,8 @@ import android.os.Bundle;
 import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
+import java.util.Random;
+
 import android.location.Address;
 import android.location.Geocoder;
 import android.view.View;
@@ -33,6 +35,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
     ImageView btnGetFacts;
     TextView txtGetFacts;
 
+    boolean countryGotten = false;
+    String userCountry;
+
     // Location manager to get the device's current location
     LocationManager locationManager;
 
@@ -46,6 +51,48 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         // Initialize UI components
         btnGetCountry = findViewById(R.id.btnGetCountry);
         txtCountry = findViewById(R.id.txtCountry);
+
+        btnGetFacts = findViewById(R.id.btnGetFacts);
+        txtGetFacts = findViewById(R.id.txtFacts);
+
+        btnGetFacts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (countryGotten != false){
+
+                    switch (userCountry){
+                        case "United Kingdom":
+                            String[] UK_facts = getResources().getStringArray(R.array.UK_array);
+                            Random UK_random = new Random();
+                            int UK_index = UK_random.nextInt(UK_facts.length);
+                            String UK_fact = UK_facts[UK_index];
+                            txtGetFacts.setText(UK_fact);
+                            break;
+                        case "Nigeria":
+                            String[] NG_facts = getResources().getStringArray(R.array.Nigeria_array);
+                            Random NG_random = new Random();
+                            int NG_index = NG_random.nextInt(NG_facts.length);
+                             String NG_fact = NG_facts[NG_index];
+                            txtGetFacts.setText(NG_fact);
+                            break;
+                        default:
+                            txtGetFacts.setText("Sadly we have no facts for " + userCountry);
+                            break;
+
+                    }
+                }
+                else {
+                    txtGetFacts.setText("Get a country first!");
+                }
+                String[] facts = getResources().getStringArray(R.array.UK_array);
+                Random random = new Random();
+                int index = random.nextInt(facts.length);
+                String fact = facts[index];
+                // TODO: display the fact in a TextView or a dialog
+            }
+        });
+
 
         // Initialize location manager
         locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
@@ -79,10 +126,14 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
 
         // Get the country name using the updated latitude and longitude
         String country = getCountryName(lat, lng);
+        userCountry = country;
+        countryGotten = true;
 
         // Update the text view with the country name
         txtCountry.setText(country);
     }
+
+
 
     @Override
     public void onStatusChanged(String provider, int status, Bundle extras) { }
