@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Troftey</string>
     <string name="home_info_text">Explore historical facts about your environment.</string>
+
+    <string-array name="UK_array">
+        <item>The United Kingdom is home to the town with the longest name in the world, Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch, fortunately the town is known also as  Llanfairpwllgwyngyll or simply Llanfair PG.</item>
+        
+        <item>The shortest war in history was between Zanzibar and Great Britain, and it lasted only 38 minutes.</item>
+    </string-array>
 </resources>
