@@ -4,6 +4,80 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E4E4E4"
     tools:context=".Home">
+
+    <!-- Image view to display the Troftey Logo(Text Version) -->
+    <ImageView
+        android:id="@+id/homeTrofteyText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/troftey_letter_black"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    <!-- Image view to display button one -->
+    <ImageView
+        android:id="@+id/homeButtonOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:src="@drawable/grey_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeTrofteyText" />
+
+    <!-- Text view to display text of button one -->
+    <TextView
+        android:id="@+id/hbTextOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:textColor="#FFFFFF"
+        android:fontFamily="sans-serif-black"
+        android:textStyle="bold"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="@+id/homeButtonOne"
+        app:layout_constraintEnd_toEndOf="@+id/homeButtonOne"
+        app:layout_constraintStart_toStartOf="@+id/homeButtonOne"
+        app:layout_constraintTop_toTopOf="@+id/homeButtonOne" />
+
+    <!-- Image view to display button two -->
+    <ImageView
+        android:id="@+id/homeButtonTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/grey_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homeButtonOne" />
+
+    <!-- Text view to display text of button two -->
+    <TextView
+        android:id="@+id/hbTextTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD Facts"
+        android:textColor="#FFFFFF"
+        android:fontFamily="sans-serif-black"
+        android:textStyle="bold"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toBottomOf="@+id/homeButtonTwo"
+        app:layout_constraintEnd_toEndOf="@+id/homeButtonTwo"
+        app:layout_constraintStart_toStartOf="@+id/homeButtonTwo"
+        app:layout_constraintTop_toTopOf="@+id/homeButtonTwo" />
+
+    <ImageView
+        android:id="@+id/homeBottomImage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bottom_design_1"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
