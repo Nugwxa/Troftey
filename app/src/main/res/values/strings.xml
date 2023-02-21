@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Troftey</string>
+    <string name="home_info_text">Explore historical facts about your environment.</string>
 </resources>
