@@ -12,6 +12,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Build;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -26,8 +27,11 @@ import android.view.View;
 public class MainActivity extends AppCompatActivity implements LocationListener {
 
     // UI components
-    Button btnGetCountry;
+    ImageView btnGetCountry;
     TextView txtCountry;
+
+    ImageView btnGetFacts;
+    TextView txtGetFacts;
 
     // Location manager to get the device's current location
     LocationManager locationManager;
@@ -50,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
         btnGetCountry.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                txtCountry.setText("Finding Location...");
                 // Check if the app has the necessary permissions to access the device's location
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {

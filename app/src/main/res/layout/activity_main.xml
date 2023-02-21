@@ -7,18 +7,14 @@
     android:background="#E4E4E4"
     tools:context=".MainActivity">
 
-    <!-- Button to get the country name -->
-    <Button
-        android:id="@+id/btnGetCountry"
+    <ImageView
+        android:id="@+id/imgCountryNameplate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="24dp"
-        android:text="Get Country Name"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="64dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/nameplate_background"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Text view to display the country name -->
     <TextView
@@ -26,10 +22,88 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:textSize="24sp"
-        android:text="hey"
-        app:layout_constraintBottom_toTopOf="@+id/btnGetCountry"
+        android:text="Press Button to explore"
+        android:textSize="16sp"
+        android:textColor="#ffffff"
+        android:fontFamily="sans-serif-black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imgCountryNameplate"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/imgCountryNameplate" />
+
+    <!-- TextView for country facts -->
+    <TextView
+        android:id="@+id/txtFacts"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/home_info_text"
+        android:textAlignment="center"
+        android:textColor="#5C5C5C"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnGetCountry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgCountryNameplate" />
+
+    <!-- Button to get the country name -->
+    <ImageView
+        android:id="@+id/btnGetCountry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/black_button"
+        app:layout_constraintBottom_toTopOf="@+id/btnGetFacts"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <!-- TextView for country facts -->
+    <TextView
+        android:id="@+id/txtGetCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GET COUNTRY"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btnGetCountry"
+        app:layout_constraintEnd_toEndOf="@+id/btnGetCountry"
+        app:layout_constraintStart_toStartOf="@+id/btnGetCountry"
+        app:layout_constraintTop_toTopOf="@+id/btnGetCountry" />
+
+    <!-- Button to get the country name -->
+    <ImageView
+        android:id="@+id/btnGetFacts"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/grey_button"
+        app:layout_constraintBottom_toTopOf="@+id/mainBottomImage"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <!-- TextView for country facts -->
+    <TextView
+        android:id="@+id/txtGetFacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GET FACTS"
+        android:textColor="#fff"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btnGetFacts"
+        app:layout_constraintEnd_toEndOf="@+id/btnGetCountry"
+        app:layout_constraintStart_toStartOf="@+id/btnGetCountry"
+        app:layout_constraintTop_toTopOf="@+id/btnGetFacts" />
+
+    <ImageView
+        android:id="@+id/mainBottomImage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bottom_design_2"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
