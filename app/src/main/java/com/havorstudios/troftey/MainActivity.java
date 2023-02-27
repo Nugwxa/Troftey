@@ -85,10 +85,6 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                 else {
                     txtGetFacts.setText("Get a country first!");
                 }
-                String[] facts = getResources().getStringArray(R.array.UK_array);
-                Random random = new Random();
-                int index = random.nextInt(facts.length);
-                String fact = facts[index];
             }
         });
 
