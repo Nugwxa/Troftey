@@ -89,7 +89,6 @@ public class MainActivity extends AppCompatActivity implements LocationListener 
                 Random random = new Random();
                 int index = random.nextInt(facts.length);
                 String fact = facts[index];
-                // TODO: display the fact in a TextView or a dialog
             }
         });
 
